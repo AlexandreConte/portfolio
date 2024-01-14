@@ -1,0 +1,24 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+@keyframes slideOpen {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideClose {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: -100%;
+  }
+}
