@@ -32,7 +32,34 @@ function openMenu() {
 
     menuBtnClose.addEventListener("click", closeMenu);
 
-    document.addEventListener("scroll", closeMenu);
+    const anchors = document.querySelectorAll(".nav");
+    anchors.forEach((anchor) => {
+        return anchor.addEventListener("click", anchorClick);
+    });
+}
+
+function anchorClick() {
+    const anchors = document.querySelectorAll(".nav");
+    const blurContent = document.getElementById("blur");
+    const menu = document.getElementById("menu");
+    const menuBtnClose = document.getElementById("closeBtn");
+    const menuBtnOpen = document.getElementById("menuBtn");
+
+    menuBtnClose.removeEventListener("click", closeMenu);
+    blurContent.className = "";
+
+    menu.style.animation = "slideClose linear 0.25s";
+
+    delay250ms().then(() => {
+        menu.classList.remove("flex");
+        menu.classList.add("hidden");
+    });
+
+    anchors.forEach((anchor) => {
+        anchor.removeEventListener("click", anchorClick);
+    });
+    
+    menuBtnOpen.addEventListener("click", openMenu);
 }
 
 function closeMenu() {
