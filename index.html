@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
@@ -16,7 +16,7 @@
       <header class="max-w-[1280px] flex justify-center mx-auto fixed w-full z-10 bg-white h-20">
         <nav class="flex justify-between items-center mt-2 mx-2 w-full">
           <!-- LOGO -->
-          <a href="/">
+          <a href="#">
             <svg width="150" viewBox="0 0 369.6666666666667 115.88940423242605">
               <defs id="SvgjsDefs1089">
                 <linearGradient id="SvgjsLinearGradient1096">
@@ -84,8 +84,8 @@
       <main class="max-w-[1280px]">
         <div class="flex items-center justify-center" id="sobre">
           <div class="text-center mx-2">
-            <span class="text-xl">Olá! Sou o <strong class="font-normal text-blue-800">Alexandre Conte</strong></span>
-            <h1 class="text-xl">Desenvolvedor <span class="text-blue-800">front end</span></h1>
+            <span class="text-xl">Olá! Sou o <strong class="font-normal text-zinc-400">Alexandre Conte</strong></span>
+            <h1 class="text-xl">Desenvolvedor <span class="text-zinc-400">front end</span></h1>
           </div>
           <div>
             <img src="./assets/eu.png" alt="Desenvolvedor Front End">
@@ -125,16 +125,30 @@
         <footer>
           <span class="flex justify-center text-2xl my-12" id="contatos">Contatos</span>
           <div class="flex justify-center gap-x-8">
-            <a class="text-blue-500 underline" href="https://www.linkedin.com/in/alecontedev/">LinkedIn</a>
-            <a class="text-blue-500 underline" href="">GitHub</a>
+            <a class="text-blue-500 underline visited:text-purple-600" target="_blank"
+              href="https://www.linkedin.com/in/alecontedev/">LinkedIn</a>
+            <a class="text-blue-500 underline visited:text-purple-600" target="_blank"
+              href="https://github.com/AlexandreConte">GitHub</a>
+            <a class="text-blue-500 underline visited:text-purple-600" target="_blank"
+              href="mailto:alexandreconte.dev@gmail.com">Gmail</a>
           </div>
-          <p class="h-20 flex justify-end items-center pt-4">Desenvolvido com ☕ por Alexandre Conte</p>
+          <p class="h-20 flex justify-end items-center pt-4 text-center">Desenvolvido com ☕ por Alexandre Conte</p>
         </footer>
       </div>
     </div>
+    <a href="#" id="arrow" class="hidden fixed bottom-4 right-4 cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-up" width="24" height="24"
+        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M12 5l0 14" />
+        <path d="M18 11l-6 -6" />
+        <path d="M6 11l6 -6" />
+      </svg>
+    </a>
   </div>
   <div id="menu"
-    class="fixed z-50 w-full h-full bg-[#1e40afe4] hidden flex-col justify-evenly items-center top-0 text-zinc-100">
+    class="fixed z-50 w-full h-full bg-[#848587e4] hidden flex-col justify-evenly items-center top-0 text-zinc-100">
     <div id="closeBtn" class="fixed right-2 top-8 cursor-pointer">
       <!-- ICON-CLOSE -->
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24"
@@ -148,15 +162,15 @@
     </div>
     <ul class="w-full h-full flex flex-col justify-evenly items-center">
       <li>
-        <a href="#sobre"
+        <a href="#sobre" class="nav"
           class="border-b border-transparent hover:border-zinc-100 transition-colors duration-150">SOBRE</a>
       </li>
       <li>
-        <a href="#projetos"
+        <a href="#projetos" class="nav"
           class="border-b border-transparent hover:border-zinc-100 transition-colors duration-150">PROJETOS</a>
       </li>
       <li>
-        <a href="#contatos"
+        <a href="#contatos" class="nav"
           class="border-b border-transparent hover:border-zinc-100 transition-colors duration-150">CONTATOS</a>
       </li>
     </ul>
